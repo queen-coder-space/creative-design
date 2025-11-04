@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+   <h1>Calculator</h1>
+    <div class="calc">
+    <input id="disp" type="text" style="height: 50px; text-align: right; width: 370px; padding: 5px; margin: 5px; ">
+        <div class="mainbtn">
+            <button onclick="clrdisp()">C</button>
+            <button  onclick="appndtodisp('(')">(</button>
+            <button  onclick="appndtodisp(')')">)</button>
+            <button  onclick="appndtodisp('/')" class="mat" id="div">/</button>
+            <button  onclick="appndtodisp('7')">7</button>
+            <button  onclick="appndtodisp('8')">8</button>
+            <button  onclick="appndtodisp('9')">9</button>
+            <button  onclick="appndtodisp('*')" class="mat" id="mul">*</button>
+            <button  onclick="appndtodisp('4')">4</button>
+            <button  onclick="appndtodisp('5')">5</button>
+            <button  onclick="appndtodisp('6')">6</button>
+            <button  onclick="appndtodisp('-')" class="mat" id="sub">-</button>
+            <button  onclick="appndtodisp('1')">1</button>
+            <button  onclick="appndtodisp('2')">2</button>
+            <button  onclick="appndtodisp('3')">3</button>
+            <button  onclick="appndtodisp('+')" class="mat" id="add">+</button>
+            <button  onclick="appndtodisp('0')">0</button>
+            <button  onclick="appndtodisp('.')">.</button>
+            <button onclick="calcresult()" id="eq"> = </button>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+const disp=document.getElementById("disp")
+function appndtodisp(inp)
+{
+    //disp.value=disp.value+=inp
+    disp.value=disp.value+inp
+}
+function clrdisp()
+{
+    disp.value=""
+}
+function calcresult()
+{
+    disp.value=eval(disp.value)
+}
+</script>
+</html>
